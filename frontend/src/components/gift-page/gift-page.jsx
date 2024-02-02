@@ -143,7 +143,12 @@ export const GiftPage = ({ extraClass = "" }) => {
         </div>
         {wishData?.offers?.length ? (
           wishData?.offers?.map(({ name, amount, createdAt }) => (
-            <UserSupportedCard name={name} amount={amount} date={createdAt} />
+            <UserSupportedCard
+              name={name}
+              img={user.avatar}
+              amount={amount}
+              date={createdAt}
+            />
           ))
         ) : (
           <p>Пока никого нет</p>
@@ -157,7 +162,9 @@ export const GiftPage = ({ extraClass = "" }) => {
           isCloseBtn={true}
         >
           <div className={styles.popup}>
-            <h2 className="text text_type_h2 mb-20">Поддержите любой суммой</h2>
+            <h2 className="text text_type_h2 mb-20">
+              Поддержите любой суммой
+            </h2>
             <div className={`mb-20 ${styles.gift_btns_box}`}>
               {priceArr.map((item, index) => {
                 return (
