@@ -143,12 +143,7 @@ export const GiftPage = ({ extraClass = "" }) => {
         </div>
         {wishData?.offers?.length ? (
           wishData?.offers?.map(({ name, amount, createdAt }) => (
-            <UserSupportedCard
-              name={name}
-              img={user.avatar}
-              amount={amount}
-              date={createdAt}
-            />
+            <UserSupportedCard name={name} amount={amount} date={createdAt} />
           ))
         ) : (
           <p>Пока никого нет</p>
